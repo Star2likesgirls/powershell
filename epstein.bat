@@ -1,0 +1,11 @@
+@echo off
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2001/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2002/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2003/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2004/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2005/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2006/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2007/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2008/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2009/view
+start https://vault.fbi.gov/jeffrey-epstein/Jeffrey%%20Epstein%%20Part%%2010/view
